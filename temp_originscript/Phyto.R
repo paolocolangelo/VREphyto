@@ -70,8 +70,8 @@ hist(Diatom_summary_table$log10KP)
 hist(Diatom_summary_table$log_a440)
 hist(Diatom_summary_table$log_a675)
 
-
-
+# alternative with lattice
+lattice::histogram(~log(biovolume)+log(cellcarboncontent)+log10VmaxN+log10KN+log10VmaxP+log10KP+log_a440+log_a675,data=Diatom_summary_table)
 
 #### Community analysis ####
 
