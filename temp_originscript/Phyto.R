@@ -71,8 +71,13 @@ hist(Diatom_summary_table$log_a440)
 hist(Diatom_summary_table$log_a675)
 
 # alternative with lattice
+#count
+lattice::histogram(~log(biovolume)+log(cellcarboncontent)+log10VmaxN+log10KN+log10VmaxP+log10KP+log_a440+log_a675,data=Diatom_summary_table,type="count")
+#percent
 lattice::histogram(~log(biovolume)+log(cellcarboncontent)+log10VmaxN+log10KN+log10VmaxP+log10KP+log_a440+log_a675,data=Diatom_summary_table)
-
+#lattice::densityplot(~log(biovolume)+log(cellcarboncontent)+log10VmaxN+log10KN+log10VmaxP+log10KP+log_a440+log_a675,data=Diatom_summary_table)
+#lattice::densityplot(~log(biovolume)+log(cellcarboncontent),data=Diatom_summary_table)
+lattice::xyplot(log(biovolume)~log(cellcarboncontent)+log10VmaxN,data=Diatom_summary_table)
 #### Community analysis ####
 
 ### Rarefaction curves
